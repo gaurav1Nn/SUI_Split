@@ -191,35 +191,53 @@ npm run dev
 - **Notifications**: Get alerts for new expenses and settlements
 - **Analytics**: View spending patterns and trends
 
-## 🛠️ Development Guide
+## 🛠️ Project Structure
 
-### **Project Structure**
-```
-suisplit/
-├── 🌐 sui_back/                     # Main application
-│   ├── 🔧 backend/                  # API server
-│   │   ├── src/                     # Backend source
-│   │   ├── package.json             # Backend config
+SUI_SPLIT/
+├── 📁 sui-finale/                   # Frontend React Application
+│   ├── 🔨 .bolt/                    # Bolt configuration
+│   ├── 📂 src/                      # Source code
+│   │   ├── 🎨 assets/               # Static assets (images, icons)
+│   │   ├── ⚛️ components/           # React components
+│   │   │   ├── Dashboard/           # Dashboard components
+│   │   │   ├── Expenses/            # Expense management
+│   │   │   ├── Layout/              # Navigation & layout
+│   │   │   ├── ParticipantBalances/ # Balance displays
+│   │   │   └── Wallet/              # Wallet integration
+│   │   ├── 🔗 context/              # React contexts
+│   │   ├── 📄 pages/                # Page components
+│   │   ├── 🛠️ services/             # API services
+│   │   ├── 🎨 styles/               # Global CSS styles
+│   │   ├── ⛓️ sui/                  # Sui blockchain integration
+│   │   ├── 📝 types/                # TypeScript definitions
+│   │   └── 🔧 utils/                # Utility functions
+│   ├── ⚛️ App.tsx                   # Main app component
+│   ├── 🎨 index.css                 # Global styles
+│   ├── 🚀 main.tsx                  # React entry point
+│   └── 📋 vite-env.d.ts             # Vite environment types
+│
+├── 🔧 sui_back/                     # Backend Services
+│   ├── 🔧 backend/                  # Express.js API server
+│   │   ├── src/                     # Backend source code
+│   │   ├── package.json             # Backend dependencies
 │   │   └── .env                     # Environment variables
-│   └── ⚛️ frontend/                 # React application
-│       ├── src/
-│       │   ├── components/          # React components
-│       │   │   ├── Dashboard/       # Dashboard components
-│       │   │   ├── Expenses/        # Expense management
-│       │   │   ├── Layout/          # Navigation, layout
-│       │   │   ├── ParticipantBalances/  # Balance displays
-│       │   │   └── Wallet/          # Wallet integration
-│       │   ├── context/             # React contexts
-│       │   ├── pages/               # Page components
-│       │   ├── sui/                 # Blockchain integration
-│       │   ├── types/               # TypeScript definitions
-│       │   └── utils/               # Utility functions
-│       ├── package.json             # Frontend config
-│       └── tailwind.config.js       # Styling config
-├── 📜 move/                         # Smart contracts (Move)
-├── 📚 docs/                         # Documentation
-└── 📋 README.md                     # This file
-```
+│   ├── ⚛️ frontend/                 # Frontend build
+│   └── 📜 move/                     # Smart contracts (Move language)
+│
+├── 📋 Configuration Files
+│   ├── .gitignore                   # Git ignore rules
+│   ├── README.md                    # Project documentation
+│   ├── declarations.d.ts            # TypeScript declarations
+│   ├── eslint.config.js             # ESLint configuration
+│   ├── index.html                   # HTML template
+│   ├── package-lock.json            # NPM lock file
+│   ├── package.json                 # Main package config
+│   ├── postcss.config.js            # PostCSS configuration
+│   ├── tailwind.config.js           # Tailwind CSS config
+│   ├── tsconfig.app.json            # TypeScript app config
+│   ├── tsconfig.json                # TypeScript base config
+│   ├── tsconfig.node.json           # TypeScript Node config
+│   └── vite.config.ts               # Vite build configuration
 
 ### **Available Scripts**
 
@@ -237,12 +255,8 @@ npm run type-check   # 📝 TypeScript validation
 #### Backend Commands
 ```bash
 cd sui_back/backend
-
-npm run dev          # 🚀 Start development server
-npm run build        # 📦 Build for production
-npm run start        # ▶️ Start production server
-npm run lint         # 🔍 Code quality check
-npm run type-check   # 📝 TypeScript validation
+npm install               
+node index.js 
 ```
 
 #### Smart Contract Commands
