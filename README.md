@@ -191,38 +191,31 @@ npm run dev
 - **Notifications**: Get alerts for new expenses and settlements
 - **Analytics**: View spending patterns and trends
 
-## 🛠️ Project Structure
+## Project Structure
 suisplit/
-├── sui-finale/                  # Frontend (React + Vite)
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── styles/
-│   │   ├── sui/
-│   │   ├── types/
-│   │   └── utils/
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-│
-├── sui_back/                   # Backend (Express)
-│   ├── backend/
-│   │   ├── src/
-│   │   ├── package.json
-│   │   └── .env
-│   └── move/                   # Sui smart contracts
-│
-├── move/                       # (Optional) separate smart contracts
-├── docs/                       # Documentation
-├── README.md
-├── .gitignore
-├── package.json
-├── tailwind.config.js
-├── vite.config.ts
-├── tsconfig.json
+├── 🌐 sui_back/                     # Main application
+│   ├── 🔧 backend/                  # API server
+│   │   ├── src/                     # Backend source
+│   │   ├── package.json             # Backend config
+│   │   └── .env                     # Environment variables
+│   └── ⚛️ frontend/                 # React application
+│       ├── src/
+│       │   ├── components/          # React components
+│       │   │   ├── Dashboard/       # Dashboard components
+│       │   │   ├── Expenses/        # Expense management
+│       │   │   ├── Layout/          # Navigation, layout
+│       │   │   ├── ParticipantBalances/  # Balance displays
+│       │   │   └── Wallet/          # Wallet integration
+│       │   ├── context/             # React contexts
+│       │   ├── pages/               # Page components
+│       │   ├── sui/                 # Blockchain integration
+│       │   ├── types/               # TypeScript definitions
+│       │   └── utils/               # Utility functions
+│       ├── package.json             # Frontend config
+│       └── tailwind.config.js       # Styling config
+├── 📜 move/                         # Smart contracts (Move)
+├── 📚 docs/                         # Documentation
+└── 📋 README.md                     # This file
 
 ### **Available Scripts**
 
