@@ -192,52 +192,37 @@ npm run dev
 - **Analytics**: View spending patterns and trends
 
 ## 🛠️ Project Structure
-
-SUI_SPLIT/
-├── 📁 sui-finale/                   # Frontend React Application
-│   ├── 🔨 .bolt/                    # Bolt configuration
-│   ├── 📂 src/                      # Source code
-│   │   ├── 🎨 assets/               # Static assets (images, icons)
-│   │   ├── ⚛️ components/           # React components
-│   │   │   ├── Dashboard/           # Dashboard components
-│   │   │   ├── Expenses/            # Expense management
-│   │   │   ├── Layout/              # Navigation & layout
-│   │   │   ├── ParticipantBalances/ # Balance displays
-│   │   │   └── Wallet/              # Wallet integration
-│   │   ├── 🔗 context/              # React contexts
-│   │   ├── 📄 pages/                # Page components
-│   │   ├── 🛠️ services/             # API services
-│   │   ├── 🎨 styles/               # Global CSS styles
-│   │   ├── ⛓️ sui/                  # Sui blockchain integration
-│   │   ├── 📝 types/                # TypeScript definitions
-│   │   └── 🔧 utils/                # Utility functions
-│   ├── ⚛️ App.tsx                   # Main app component
-│   ├── 🎨 index.css                 # Global styles
-│   ├── 🚀 main.tsx                  # React entry point
-│   └── 📋 vite-env.d.ts             # Vite environment types
+suisplit/
+├── sui-finale/                  # Frontend (React + Vite)
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── styles/
+│   │   ├── sui/
+│   │   ├── types/
+│   │   └── utils/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
 │
-├── 🔧 sui_back/                     # Backend Services
-│   ├── 🔧 backend/                  # Express.js API server
-│   │   ├── src/                     # Backend source code
-│   │   ├── package.json             # Backend dependencies
-│   │   └── .env                     # Environment variables
-│   ├── ⚛️ frontend/                 # Frontend build
-│   └── 📜 move/                     # Smart contracts (Move language)
+├── sui_back/                   # Backend (Express)
+│   ├── backend/
+│   │   ├── src/
+│   │   ├── package.json
+│   │   └── .env
+│   └── move/                   # Sui smart contracts
 │
-├── 📋 Configuration Files
-│   ├── .gitignore                   # Git ignore rules
-│   ├── README.md                    # Project documentation
-│   ├── declarations.d.ts            # TypeScript declarations
-│   ├── eslint.config.js             # ESLint configuration
-│   ├── index.html                   # HTML template
-│   ├── package-lock.json            # NPM lock file
-│   ├── package.json                 # Main package config
-│   ├── postcss.config.js            # PostCSS configuration
-│   ├── tailwind.config.js           # Tailwind CSS config
-│   ├── tsconfig.app.json            # TypeScript app config
-│   ├── tsconfig.json                # TypeScript base config
-│   ├── tsconfig.node.json           # TypeScript Node config
-│   └── vite.config.ts               # Vite build configuration
+├── move/                       # (Optional) separate smart contracts
+├── docs/                       # Documentation
+├── README.md
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+├── tsconfig.json
 
 ### **Available Scripts**
 
