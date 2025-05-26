@@ -192,6 +192,8 @@ npm run dev
 - **Analytics**: View spending patterns and trends
 
 ## Project Structure
+
+```
 suisplit/
 ├── 🌐 sui_back/                     # Main application
 │   ├── 🔧 backend/                  # API server
@@ -216,6 +218,8 @@ suisplit/
 ├── 📜 move/                         # Smart contracts (Move)
 ├── 📚 docs/                         # Documentation
 └── 📋 README.md                     # This file
+
+```
 
 ### **Available Scripts**
 
